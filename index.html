@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>String Manipulation</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar">
+        <h1>String Manipulation</h1> 
+      </div>
+      <div>
+        <h2>Write a word to add to manipulate</h2>
+        <input type="text" v-model="word">
+        <button class="button" v-on:click="manipulateString()">Click to manipulate</button>
+        <ul>
+          <li v-for="string in manipulatedStrings">{{ string }}</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+    <!--Mount App-->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
